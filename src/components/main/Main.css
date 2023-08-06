@@ -1,0 +1,22 @@
+.main-display{
+    color: white;
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: 3.8rem;
+    border: 1px solid gold;
+}
+
+@media screen and (min-width: 768px) {
+    .main-display{
+        gap: 2.4rem;
+        padding-bottom: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-display{
+        gap: 2.5rem;
+        padding-bottom: 3.25rem;
+        width: 100vw;
+    }
+}

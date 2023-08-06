@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--dark-blue);
+}
+
+:root{
+  --greyish-blue: #5A698F;
+  --pure-white: #FFFFFF;
+  --red: #FC4747;
+  --dark-blue: #10141E;
+  --semiDark-blue: #161D2F;
+}
+
+.center-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}

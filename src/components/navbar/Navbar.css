@@ -1,0 +1,61 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--semiDark-blue);
+    padding: 1.25rem 1rem;
+}
+
+.navbar--logo{
+    color: var(--red);
+
+}
+
+.nav--categories{
+    gap: 1.5rem;
+}
+
+.nav-button{
+    color: var(--greyish-blue);
+    cursor: pointer;
+}
+
+.nav-button:hover{
+    color: var(--pure-white);
+}
+
+.active{
+    color: var(--pure-white);
+}
+
+
+.avatar-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--pure-white);
+    background-image: url(https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar{
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        height: 60rem;
+        margin: 2rem 0 2rem 2rem;
+    }
+    .nav--categories{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .avatar-button{
+        align-self: flex-end;
+    }
+}

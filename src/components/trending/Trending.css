@@ -1,0 +1,15 @@
+.trending-section{
+    padding: 0 0 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .trending-section{
+        padding: 0 0 0 1.56rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .trending-section{
+        padding: 0 0 0 2.25rem;
+    }
+}

@@ -1,0 +1,15 @@
+.recommended-section{
+    padding: 0 1rem 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .recommended-section{
+        padding: 0 1.56rem 0 1.56rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .recommended-section{
+        padding: 0 2.25rem 0 2.25rem;
+    }
+}
