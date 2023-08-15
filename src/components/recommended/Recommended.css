@@ -2,6 +2,14 @@
     padding: 0 1rem 0 1rem;
 }
 
+.gallery-default{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2rem;
+}
+
 @media screen and (min-width: 768px) {
     .recommended-section{
         padding: 0 1.56rem 0 1.56rem;

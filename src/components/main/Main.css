@@ -3,7 +3,6 @@
     display: grid;
     gap: 1.5rem;
     padding-bottom: 3.8rem;
-    border: 1px solid gold;
 }
 
 @media screen and (min-width: 768px) {

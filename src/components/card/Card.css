@@ -1,0 +1,94 @@
+.card{
+    position: relative;
+}
+
+.button-bookmark{
+    position: absolute;
+    right: 0;
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bookmarkIcon{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.card--large{
+    width: 240px;
+    height: 140px;
+}
+
+.card--default {
+    width: 164px;
+    height: 154px;
+}
+
+.card--cover{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+    border-radius: 10px;
+}
+
+.card--cover--large{
+    height: 100%;
+}
+
+.card--cover--default{
+    height: 7rem;
+}
+
+.card--info{
+    display: grid;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.card--description{
+    font-size: 0.688rem;
+    font-weight: light;
+}
+
+.card--title{
+    font-size: 0.875rem;
+    font-weight: medium;
+}
+
+.activeTitleBar{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .card--large{
+        width: 470px;
+        height: 230px;
+    }
+    .card--default {
+        width: 220px;
+        height: 192px;
+    }
+    .card--info{
+        gap: 0.313rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card--default {
+        width: 280px;
+        height: 226px;
+    }
+    .card--info{
+        gap: 0.313rem;
+        margin-top: 0.5rem;
+    }
+}
+

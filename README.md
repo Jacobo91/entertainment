@@ -1,4 +1,4 @@
-# Entertainment App
+# Entertainment App - API (MoviesDatabase)
 
 - react-router-dom
 - mui  
@@ -19,3 +19,10 @@ class (center-content) is used to center as it name says hahaha 😂
 ### Recommended Component is reused through navigation
 
 - It is used in Pages: (movies, series and bookmarked)
+
+## Card
+
+One card works for all, having the following props:
+
+- sizing: large and default classes (sets as default if large is not used)
+- titleBar : activeTitleBar and default classes (sets as default if titleBar is not used)
