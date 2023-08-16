@@ -30,8 +30,7 @@ export const useTitles = (
                 const response = await fetch(url, options);
                 if (response.ok) {
                     const result = await response.json();
-                    const filteredResults = result.results?.filter(title => title.primaryImage && title.primaryImage !== null)
-                    console.log("data:", result)
+                    const filteredResults = result.results?.filter(title => title.primaryImage && title.primaryImage !== null);
                     setIsLoading(false);
                     setData(filteredResults)
                 }

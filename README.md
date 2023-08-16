@@ -26,3 +26,8 @@ One card works for all, having the following props:
 
 - sizing: large and default classes (sets as default if large is not used)
 - titleBar : activeTitleBar and default classes (sets as default if titleBar is not used)
+
+# API calls
+- API calls are made though a custom hook called useTitle that received the following props (genre, startYear, titleType, limit)
+
+- genre is the only prop the user can interact with by using the genres selector, which is set using useContext so its value can be easily used on the Components(Movies and Series). 

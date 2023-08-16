@@ -1,5 +1,7 @@
 .search-input-container{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -7,11 +9,12 @@
     background-color: transparent;
     border: transparent;
     border-bottom: 1px solid var(--pure-white);
-    width: 16rem;
+    width: 14rem;
     height: 1.5rem;
     color: var(--pure-white);
     outline: none;
     caret-color: var(--red);
+    margin-left: 0.2rem;
 }
 
 @media screen and (min-width: 768px) {

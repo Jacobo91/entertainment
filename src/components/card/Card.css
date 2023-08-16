@@ -22,6 +22,7 @@
 .card--large{
     width: 240px;
     height: 140px;
+    flex: 0 0 auto;
 }
 
 .card--default {

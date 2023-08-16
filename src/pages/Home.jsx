@@ -7,7 +7,7 @@ export const Home = () => {
 
     const {isLoading, 
         hasError, 
-        data} = useTitles("", 2015, "movie", 10);
+        data} = useTitles("", 2015, "movie", 50);
 
     if (isLoading) {
     return (<LoadingSpinner/>)
@@ -19,7 +19,7 @@ export const Home = () => {
 
     return (
         <>
-            <Trending />
+            <Trending data={data} />
             <Recommended title="Recommended for you" data={data}/>
         </>
     )

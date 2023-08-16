@@ -1,0 +1,7 @@
+.genres-selector{
+    background-color: transparent;
+    border: none;
+    color: var(--red);
+    outline: none;
+    width: 5rem;
+}

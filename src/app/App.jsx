@@ -6,14 +6,15 @@ import { Main } from '../components/main/Main';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <SplitScreen>
-          <NavBar/>
-          <Main/>
-        </SplitScreen>
-      </div>
-    </Router>
+    
+      <Router>
+        <div className="App">
+          <SplitScreen>
+            <NavBar />
+            <Main />
+          </SplitScreen>
+        </div>
+      </Router>
   );
 }
 

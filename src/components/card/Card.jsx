@@ -3,6 +3,7 @@ import './Card.css';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { PropTypes } from 'prop-types';
+import { choppedTitle } from "../../utils";
 
 export const Card = ({
     large,
@@ -14,8 +15,6 @@ export const Card = ({
     const titleBarClass = titleBar ? "activeTitleBar" : null;
     const imageClass = large ? "large" : "default";
 
-
-    console.log("results:", data)
     return (
         <>
             {
@@ -39,7 +38,7 @@ export const Card = ({
                             </div>
 
                             <div id='title' className='card--title'>
-                                {title.originalTitleText.text}
+                                {choppedTitle(title.originalTitleText.text)}
                             </div>
                         </div>
                     </div>

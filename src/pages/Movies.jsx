@@ -1,12 +1,18 @@
 import LoadingSpinner from "../components/loadingSpinner/LoadingSpinner";
-import { Recommended } from "../components/recommended/Recommended"
-import { useTitles } from "../hooks/useTitles"
+import { Recommended } from "../components/recommended/Recommended";
+import { useTitles } from "../hooks/useTitles";
+
+import * as React from 'react';
+import { Context } from "../context/context";
+
 
 export const Movies = () => {
 
+    const { genre } = React.useContext(Context)
+
     const {isLoading, 
             hasError, 
-            data} = useTitles("Drama", 2023, "movie", 10);
+            data} = useTitles(genre, 2023, "movie", 30);
 
     if (isLoading) {
         return (<LoadingSpinner/>)
