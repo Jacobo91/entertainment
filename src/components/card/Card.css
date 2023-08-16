@@ -26,7 +26,9 @@
 }
 
 .card--default {
-    width: 164px;
+    flex: 1;
+    min-width: 164px;
+    max-width: 100%;
     height: auto;
 }
 
