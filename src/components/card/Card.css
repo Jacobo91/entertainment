@@ -27,7 +27,7 @@
 
 .card--default {
     width: 164px;
-    height: 154px;
+    height: auto;
 }
 
 .card--cover{
@@ -68,14 +68,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .card--large{
+    /* .card--large{
         width: 470px;
-        height: 230px;
+        height: auto;
     }
     .card--default {
         width: 220px;
-        height: 192px;
-    }
+        height: auto;
+    } */
     .card--info{
         gap: 0.313rem;
         margin-top: 0.5rem;
@@ -83,10 +83,10 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .card--default {
+    /* .card--default {
         width: 280px;
-        height: 226px;
-    }
+        height: auto;
+    } */
     .card--info{
         gap: 0.313rem;
         margin-top: 0.5rem;

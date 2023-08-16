@@ -3,6 +3,7 @@ import { Recommended } from "../components/recommended/Recommended";
 import { useTitles } from "../hooks/useTitles";
 import LoadingSpinner from "../components/loadingSpinner/LoadingSpinner";
 
+
 export const Home = () => { 
 
     const {isLoading, 

@@ -11,7 +11,7 @@ export const Trending = ({ data }) => {
                 <Card
                     large
                     titleBar
-                    data={data}
+                    // data={data}
                 />
             </section>
         </section>
