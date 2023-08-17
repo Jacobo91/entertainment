@@ -1,10 +1,10 @@
 import * as React from "react";
 import './Select.css';
-import { Context } from "../../context/context";
+import { useGenreContext } from "../../context/GenreProvider";
 
 export const Select = () => {
     console.log('%cstart Select render', 'color: MediumSpringGreen')
-    const {setGenre} = React.useContext(Context)
+    const {setGenre} = useGenreContext();
 
     const handleChange = (e) => {
         const { value } = e.target;

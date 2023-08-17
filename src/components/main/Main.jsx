@@ -6,13 +6,18 @@ import { Home } from '../../pages/Home';
 import { Movies } from '../../pages/Movies';
 import { Series } from '../../pages/Series';
 import { Bookmarked } from '../../pages/Bookmarked';
+import { Select } from '../select/Select';
+
 
 
 export const Main = () => {
     console.log("%cstart main section render", 'color: skyBlue')
     return(
         <main className='main-display' >
-            <SearchBar />
+            <div className='search-filter-container' >
+                <SearchBar />
+                <Select/>
+            </div>
             <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/movies' element={<Movies/>} />

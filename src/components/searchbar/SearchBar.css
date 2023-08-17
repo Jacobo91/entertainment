@@ -1,9 +1,4 @@
-.search-input-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem 0 1rem;
-}
+
 
 .searchbar-input{
     background-color: transparent;
@@ -17,15 +12,4 @@
     margin-left: 0.2rem;
 }
 
-@media screen and (min-width: 768px) {
-    .search-input-container{
-        padding: 1.56rem 1.56rem 0 1.56rem;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .search-input-container{
-        padding: 4rem 2.25rem 0 2.25rem;
-    }
-}
 

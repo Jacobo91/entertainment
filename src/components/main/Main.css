@@ -7,10 +7,20 @@
     overflow-x: hidden;
 }
 
+.search-filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
 @media screen and (min-width: 768px) {
     .main-display{
         gap: 2.4rem;
         padding-bottom: 3.5rem;
+    }
+    .search-filter-container{
+        padding: 1.56rem 1.56rem 0 1.56rem;
     }
 }
 
@@ -18,5 +28,8 @@
     .main-display{
         gap: 2.5rem;
         padding-bottom: 3.25rem;
+    }
+    .search-filter-container{
+        padding: 4rem 2.25rem 0 2.25rem;
     }
 }

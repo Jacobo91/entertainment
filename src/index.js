@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
-import ContextProvider  from './context/contextProvider';
+import {SearchProvider} from './context/SearchProvider';
+import { GenreProvider } from './context/GenreProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ContextProvider>
-      <App />
-    </ContextProvider>
+    <SearchProvider>
+      <GenreProvider>
+        <App />
+      </GenreProvider>
+    </SearchProvider>
   </React.StrictMode>
 );
 

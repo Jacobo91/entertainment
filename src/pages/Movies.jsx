@@ -3,12 +3,11 @@ import { Recommended } from "../components/recommended/Recommended";
 import { useTitles } from "../hooks/useTitles";
 
 import * as React from 'react';
-import { Context } from "../context/context";
-
+import { useGenreContext } from "../context/GenreProvider";
 
 export const Movies = () => {
     console.log('%crendering Movies', 'color: red')
-    const { genre } = React.useContext(Context)
+    const { genre } = useGenreContext()
 
     const {isLoading, 
             hasError, 
