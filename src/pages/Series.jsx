@@ -6,7 +6,7 @@ import * as React from 'react';
 import { Context } from "../context/context"; 
 
 export const Series = () => {
-
+    console.log('%crendering Series', 'color: green')
     const { genre } = React.useContext(Context);
 
     const {isLoading, 

@@ -5,6 +5,8 @@ import { NavBar } from '../components/navbar/Navbar';
 import { Main } from '../components/main/Main';
 
 function App() {
+  console.log("starting app render")
+  console.log("end app render")
   return (
     
       <Router>
@@ -16,6 +18,7 @@ function App() {
         </div>
       </Router>
   );
+  
 }
 
 export default App;

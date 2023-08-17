@@ -3,11 +3,14 @@ import { Context } from './context';
 
 const ContextProvider = ({ children }) => {
     const [genre, setGenre] = React.useState("");
+    const [searchTerm, setSearchTerm] = React.useState("");
     return(
         <Context.Provider
             value={{
                 genre,
                 setGenre,
+                searchTerm,
+                setSearchTerm,
             }}
         >
             {children}

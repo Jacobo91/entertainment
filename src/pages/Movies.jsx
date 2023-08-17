@@ -7,7 +7,7 @@ import { Context } from "../context/context";
 
 
 export const Movies = () => {
-
+    console.log('%crendering Movies', 'color: red')
     const { genre } = React.useContext(Context)
 
     const {isLoading, 

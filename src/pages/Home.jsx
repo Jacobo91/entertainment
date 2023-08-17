@@ -6,7 +6,7 @@ import { useRandom } from "../hooks/useRandom";
 
 
 export const Home = () => { 
-
+    console.log('%crendering Home', 'color: brown')
     const { isLoading,
             hasError,
             data } = useTitles("", 2015, "movie", 50);

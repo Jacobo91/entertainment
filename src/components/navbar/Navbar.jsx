@@ -9,6 +9,7 @@ import TvIcon from '@mui/icons-material/Tv';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 export const NavBar = () => {
+    console.log("%cstarting navbar render", 'color: yellow')
     return(
         <nav className='navbar' >
             

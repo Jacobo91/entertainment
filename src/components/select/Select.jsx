@@ -1,12 +1,15 @@
 import * as React from "react";
 import './Select.css';
+import { Context } from "../../context/context";
 
-export const Select = ({ onSelection }) => {
+export const Select = () => {
+    console.log('%cstart Select render', 'color: MediumSpringGreen')
+    const {setGenre} = React.useContext(Context)
 
     const handleChange = (e) => {
         const { value } = e.target;
         console.log(value);
-        onSelection(value)
+        setGenre(value)
     };
 
     return (

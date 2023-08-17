@@ -9,7 +9,7 @@ import { Bookmarked } from '../../pages/Bookmarked';
 
 
 export const Main = () => {
-
+    console.log("%cstart main section render", 'color: skyBlue')
     return(
         <main className='main-display' >
             <SearchBar />

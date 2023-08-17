@@ -23,12 +23,12 @@ export const Card = ({
                         <button className='button-bookmark'>
                             <BookmarkBorderIcon className='bookmarkIcon' />
                         </button>
-                        <img
-                            id="cover"
-                            className={`card--cover card--cover--${imageClass}`}
-                            src={title.primaryImage?.url}
-                            alt={title.titleText.text}
-                        />
+                            <img
+                                id="cover"
+                                className={`card--cover card--cover--${imageClass}`}
+                                src={title.primaryImage?.url}
+                                alt={title.titleText.text}
+                            />
                         <div
                             id="info"
                             className={`card--info ${titleBarClass}`}
