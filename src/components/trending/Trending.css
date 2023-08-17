@@ -7,7 +7,7 @@
     gap: 1rem;
     overflow-x: scroll;
     overflow-y: hidden;
-    width: 90vw;
+    width: 94vw;
     white-space: nowrap;
     scrollbar-width: thin;
     scrollbar-color: #aaa #f1f1f1;
@@ -16,7 +16,7 @@
 
 .trending-gallery::-webkit-scrollbar {
     width: 1rem;
-    height: 0.6rem; 
+    height: 0.4rem; 
 }
 
 .trending-gallery::-webkit-scrollbar-track {
@@ -24,7 +24,7 @@
 }
 
 .trending-gallery::-webkit-scrollbar-thumb {
-    background-color: var(--greyish-blue);
+    background-color: var(--red);
     border-radius: 5px; 
 }
 

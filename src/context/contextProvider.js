@@ -3,12 +3,11 @@ import { Context } from './context';
 
 const ContextProvider = ({ children }) => {
     const [genre, setGenre] = React.useState("");
-
     return(
         <Context.Provider
             value={{
                 genre,
-                setGenre
+                setGenre,
             }}
         >
             {children}

@@ -24,7 +24,7 @@ export const Movies = () => {
     
     return (
         <>
-            {data && <Recommended  title='Movies' data={data}/>}
+            {data && <Recommended  title='Movies' data={data} isLoading={isLoading} />}
         </>
     )
 }

@@ -7,7 +7,9 @@ import { Movies } from '../../pages/Movies';
 import { Series } from '../../pages/Series';
 import { Bookmarked } from '../../pages/Bookmarked';
 
+
 export const Main = () => {
+
     return(
         <main className='main-display' >
             <SearchBar />
