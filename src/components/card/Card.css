@@ -70,10 +70,11 @@
 }
 
 @media screen and (min-width: 768px) {
-    /* .card--large{
+    .card--large{
         width: 470px;
-        height: auto;
+        height: 230px;
     }
+    /*
     .card--default {
         width: 220px;
         height: auto;

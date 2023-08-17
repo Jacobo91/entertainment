@@ -12,7 +12,7 @@ export const Movies = () => {
 
     const {isLoading, 
             hasError, 
-            data} = useTitles(genre, 2023, "movie", 30);
+            data} = useTitles(genre, 2023, "movie", 40);
 
     if (isLoading) {
         return (<LoadingSpinner/>)

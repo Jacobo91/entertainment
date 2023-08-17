@@ -34,7 +34,7 @@ export const Card = ({
                             className={`card--info ${titleBarClass}`}
                         >
                             <div id='description' className='card--description'>
-                                {`${title.releaseYear.year} • ${title.titleType.text}`}
+                                {`${title.releaseYear?.year} • ${title.titleType.text}`}
                             </div>
 
                             <div id='title' className='card--title'>
