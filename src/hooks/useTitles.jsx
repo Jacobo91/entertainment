@@ -1,22 +1,25 @@
 import * as React from 'react';
-
+import { debounce } from 'lodash';
 
 
 export const useTitles = (
     genre,
     startYear,
     titleType,
-    limit
+    limit,
+    searchTerm
 ) => {
     const [isLoading, setIsLoading] = React.useState(false);
     const [hasError, setHasError] = React.useState(false);
     const [data, setData] = React.useState([]);
 
     React.useEffect(() => {
-        const getTitles = async () => {
+
+        const getTitles = debounce(async () => {
+            const bySearchUrl = `https://moviesdatabase.p.rapidapi.com/titles/search/title/${searchTerm}?exact=false&titleType=movie`;
             const urlNoGenre = `https://moviesdatabase.p.rapidapi.com/titles?startYear=${startYear}&limit=${limit}`;
-            const url = genre ? `https://moviesdatabase.p.rapidapi.com/titles?genre=${genre}&startYear=${startYear}&titleType=${titleType}&limit=${limit}` : urlNoGenre;
-            
+            const byGenre = `https://moviesdatabase.p.rapidapi.com/titles?genre=${genre}&startYear=${startYear}&titleType=${titleType}&limit=${limit}`;
+            const url = searchTerm ? bySearchUrl : !searchTerm && genre ? byGenre : urlNoGenre;
             const options = {
                 method: 'GET',
                 headers: {
@@ -38,9 +41,15 @@ export const useTitles = (
             } catch (error) {
                 setHasError(error)
             }
-        };
+        }, 500);
+
         getTitles(genre, startYear, titleType, limit);
-    }, [genre, limit, startYear, titleType]);
+
+        return () => {
+            getTitles.cancel();
+        }
+
+    }, [genre, limit, searchTerm, startYear, titleType]);
 
     return {
         isLoading,

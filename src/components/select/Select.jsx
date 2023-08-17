@@ -1,15 +1,18 @@
 import * as React from "react";
 import './Select.css';
 import { useGenreContext } from "../../context/GenreProvider";
+import { useSearchContext } from "../../context/SearchProvider";
 
 export const Select = () => {
     console.log('%cstart Select render', 'color: MediumSpringGreen')
     const {setGenre} = useGenreContext();
+    const { setSearchTerm } = useSearchContext();
 
     const handleChange = (e) => {
         const { value } = e.target;
         console.log(value);
         setGenre(value)
+        setSearchTerm("")
     };
 
     return (

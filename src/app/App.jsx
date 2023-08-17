@@ -1,6 +1,6 @@
 import './App.css';
 import { SplitScreen } from '../components/screen-layout/SplitScreen';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { NavBar } from '../components/navbar/Navbar';
 import { Main } from '../components/main/Main';
 
