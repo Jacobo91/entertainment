@@ -18,12 +18,7 @@ export const Trending = ({ data }) => {
                         large
                         titleBar
                         key={title.id}
-                        id={title.id}
-                        img={title.primaryImage?.url}
-                        title={title.titleText.text}
-                        year={title.releaseYear?.year}
-                        titleType={title.titleType.text}
-                        originalTitle={title.originalTitleText.text}
+                        data={title}
                     />
                     ))
                 }

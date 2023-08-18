@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { NavBar } from '../components/navbar/Navbar';
 import { Main } from '../components/main/Main';
 
+
 function App() {
   console.log("starting app render")
   console.log("end app render")

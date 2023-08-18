@@ -5,14 +5,16 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import {SearchProvider} from './context/SearchProvider';
 import { GenreProvider } from './context/GenreProvider';
-
+import { FavoritesProvider } from './context/useFavorites';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <SearchProvider>
       <GenreProvider>
+        <FavoritesProvider>
           <App />
+        </FavoritesProvider>
       </GenreProvider>
     </SearchProvider>
   </React.StrictMode>
