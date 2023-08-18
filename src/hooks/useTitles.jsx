@@ -16,8 +16,8 @@ export const useTitles = (
     React.useEffect(() => {
 
         const getTitles = debounce(async () => {
-            const bySearchUrl = `https://moviesdatabase.p.rapidapi.com/titles/search/title/${searchTerm}?exact=false&titleType=movie`;
-            const urlNoGenre = `https://moviesdatabase.p.rapidapi.com/titles?startYear=${startYear}&limit=${limit}`;
+            const bySearchUrl = `https://moviesdatabase.p.rapidapi.com/titles/search/title/${searchTerm}?exact=false&titleType=${titleType}`;
+            const urlNoGenre = `https://moviesdatabase.p.rapidapi.com/titles?startYear=${startYear}&limit=${limit}&titleType=${titleType}`;
             const byGenre = `https://moviesdatabase.p.rapidapi.com/titles?genre=${genre}&startYear=${startYear}&titleType=${titleType}&limit=${limit}`;
             const url = searchTerm ? bySearchUrl : !searchTerm && genre ? byGenre : urlNoGenre;
             const options = {
