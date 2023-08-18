@@ -1,5 +1,5 @@
 import './Navbar.css';
-
+import * as React from 'react';
 import { NavLink } from "react-router-dom";
 
 import MovieIcon from '@mui/icons-material/Movie';
@@ -10,8 +10,9 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 export const NavBar = () => {
     console.log("%cstarting navbar render", 'color: yellow')
+    const navRef = React.useRef()
     return(
-        <nav className='navbar' >
+        <nav  ref={navRef} className='navbar' >
             
             <MovieIcon className='navbar--logo' />
             

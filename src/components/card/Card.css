@@ -15,8 +15,8 @@
 }
 
 .bookmarkIcon{
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1rem;
+    height: 1rem;
 }
 
 .card--large{
@@ -31,8 +31,6 @@
     max-width: 100%;
     height: auto;
 }
-
-
 
 .card--cover{
     width: 100%;

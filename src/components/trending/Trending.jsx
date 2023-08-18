@@ -12,11 +12,21 @@ export const Trending = ({ data }) => {
             </h2>
 
             <section className='trending-gallery' >
-                <Card
-                    large
-                    titleBar
-                    data={data}
-                />
+                {
+                    data && data?.map(title => (
+                        <Card
+                        large
+                        titleBar
+                        key={title.id}
+                        id={title.id}
+                        img={title.primaryImage?.url}
+                        title={title.titleText.text}
+                        year={title.releaseYear?.year}
+                        titleType={title.titleType.text}
+                        originalTitle={title.originalTitleText.text}
+                    />
+                    ))
+                }
             </section>
         </section>
     );

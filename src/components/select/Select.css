@@ -4,4 +4,5 @@
     color: var(--red);
     outline: none;
     width: 5rem;
+    text-align: right;
 }

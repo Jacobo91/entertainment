@@ -8,8 +8,14 @@ import { choppedTitle } from "../../utils";
 export const Card = ({
     large,
     titleBar,
-    data
+    id,
+    img,
+    title,
+    year,
+    titleType,
+    originalTitle
 }) => {
+    const [bookmark, setBookmark] = React.useState(false);
 
     const sizeClass = large ? "large" : "default";
     const titleBarClass = titleBar ? "activeTitleBar" : null;
@@ -17,33 +23,36 @@ export const Card = ({
 
     return (
         <>
-            {
-                data?.map(title => (
-                    <div id="card" className={`card card--${sizeClass}`} key={title.id}>
-                        <button className='button-bookmark'>
-                            <BookmarkBorderIcon className='bookmarkIcon' />
-                        </button>
-                            <img
-                                id="cover"
-                                className={`card--cover card--cover--${imageClass}`}
-                                src={title.primaryImage?.url}
-                                alt={title.titleText.text}
-                            />
-                        <div
-                            id="info"
-                            className={`card--info ${titleBarClass}`}
-                        >
-                            <div id='description' className='card--description'>
-                                {`${title.releaseYear?.year} • ${title.titleType.text}`}
-                            </div>
-
-                            <div id='title' className='card--title'>
-                                {choppedTitle(title.originalTitleText.text)}
-                            </div>
-                        </div>
+            <div id="card" className={`card card--${sizeClass}`} >
+                <button
+                    className='button-bookmark'
+                    onClick={() => setBookmark(prev => !prev)}>
+                    {
+                        bookmark ?
+                            (<BookmarkIcon className='bookmarkIcon' />)
+                            :
+                            (<BookmarkBorderIcon className='bookmarkIcon' />)
+                    }
+                </button>
+                <img
+                    id="cover"
+                    className={`card--cover card--cover--${imageClass}`}
+                    src={img}
+                    alt={title}
+                />
+                <div
+                    id="info"
+                    className={`card--info ${titleBarClass}`}
+                >
+                    <div id='description' className='card--description'>
+                        {`${year} • ${titleType}`}
                     </div>
-                ))
-            }
+
+                    <div id='title' className='card--title'>
+                        {choppedTitle(originalTitle)}
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

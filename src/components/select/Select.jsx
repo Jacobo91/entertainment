@@ -5,8 +5,8 @@ import { useSearchContext } from "../../context/SearchProvider";
 
 export const Select = () => {
     console.log('%cstart Select render', 'color: MediumSpringGreen')
-    const {setGenre} = useGenreContext();
-    const { setSearchTerm } = useSearchContext();
+    const {genre, setGenre} = useGenreContext();
+    const { searchTerm, setSearchTerm } = useSearchContext();
 
     const handleChange = (e) => {
         const { value } = e.target;
@@ -22,6 +22,7 @@ export const Select = () => {
                 name="genres"
                 className="genres-selector" 
                 onChange={(e) => handleChange(e)}
+                value={searchTerm ? "" : genre}
                 >
                 <option value="">Genres</option>
                 <option value="Drama">Drama</option>

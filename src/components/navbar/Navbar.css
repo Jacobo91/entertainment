@@ -4,6 +4,9 @@
     align-items: center;
     background-color: var(--semiDark-blue);
     padding: 1.25rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar--logo{

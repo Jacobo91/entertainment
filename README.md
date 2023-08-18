@@ -28,6 +28,6 @@ One card works for all, having the following props:
 - titleBar : activeTitleBar and default classes (sets as default if titleBar is not used)
 
 # API calls
-- API calls are made though a custom hook called useTitle that received the following props (genre, startYear, titleType, limit)
+- API calls are made though a custom hook called useTitles that received the following props (genre, startYear, titleType, limit, searchTerm), searchTerm is used to fetch by title name through  the search bar and is debounced to avoid making too many requests to it.
 
 - genre is the only prop the user can interact with by using the genres selector, which is set using useContext so its value can be easily used on the Components(Movies and Series). 
