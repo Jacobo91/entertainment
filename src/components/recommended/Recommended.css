@@ -5,10 +5,8 @@
 .gallery-default{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 0.8rem;
-    box-sizing: border-box;
+    justify-content: space-evenly;
+    gap: 0.5rem;
 }
 
 @media screen and (max-width: 368px) {
@@ -20,6 +18,9 @@
 @media screen and (min-width: 768px) {
     .recommended-section{
         padding: 0 1.56rem 0 1.56rem;
+    }
+    .gallery-default{
+        gap: 1rem;
     }
 }
 

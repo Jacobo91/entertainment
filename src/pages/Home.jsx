@@ -5,10 +5,10 @@ import LoadingSpinner from "../components/loadingSpinner/LoadingSpinner";
 import { useRandom } from "../hooks/useRandom";
 import { useSearchContext } from "../context/SearchProvider";
 
-export const Home = () => { 
+const Home = () => { 
 
     const { searchTerm } = useSearchContext();
-  
+
     console.log('%crendering Home', 'color: brown')
     const { isLoading,
             hasError,
@@ -32,3 +32,6 @@ export const Home = () => {
         </>
     )
 }
+
+export default Home;
+

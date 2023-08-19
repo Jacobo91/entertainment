@@ -1,7 +1,7 @@
 import { Recommended } from "../components/recommended/Recommended"
 import { useFavoritesContext } from "../context/useFavorites"
 
-export const Bookmarked = () => {
+const Bookmarked = () => {
     console.log('%crendering Bookmarked', 'color: orange') 
     const { favorites } = useFavoritesContext();
     console.log("favorites:", favorites)
@@ -11,3 +11,5 @@ export const Bookmarked = () => {
         </>
     )
 }
+
+export default Bookmarked;

@@ -6,7 +6,7 @@ import * as React from 'react';
 import { useGenreContext } from "../context/GenreProvider";
 import { useSearchContext } from "../context/SearchProvider";
 
-export const Series = () => {
+const Series = () => {
     console.log('%crendering Series', 'color: green')
     const { genre } = useGenreContext();
     const {searchTerm} = useSearchContext();
@@ -28,3 +28,5 @@ export const Series = () => {
         </>
     )
 }
+
+export default Series;

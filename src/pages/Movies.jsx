@@ -6,7 +6,7 @@ import * as React from 'react';
 import { useGenreContext } from "../context/GenreProvider";
 import { useSearchContext } from "../context/SearchProvider";
 
-export const Movies = () => {
+const Movies = () => {
     console.log('%crendering Movies', 'color: red')
     const { genre } = useGenreContext()
     const {searchTerm} = useSearchContext()
@@ -29,3 +29,5 @@ export const Movies = () => {
         </>
     )
 }
+
+export default Movies;
