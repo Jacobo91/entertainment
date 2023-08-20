@@ -36,9 +36,7 @@
     transition: transform 0.7s;
 }
 
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
+
 
 .card-front,
 .card-back {
@@ -91,4 +89,9 @@
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+}
 
