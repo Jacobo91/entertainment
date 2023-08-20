@@ -23,7 +23,7 @@ export function addToFavorites(favorites, setFavorites, data) {
             return;
         }
     }
-    setFavorites(prevFavorites => [...prevFavorites, data]);
+    setFavorites(prevFavorites => [...prevFavorites, {...data, isFavorite: true}]);
         // alert
         Swal.fire({...alertStructure, title:'Added to favorites'})
 }

@@ -9,9 +9,17 @@
     z-index: 10;
 }
 
+.navbar--logo-section{
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar--logo-word{
+    color: var(--red);
+}
+
 .navbar--logo{
     color: var(--red);
-
 }
 
 .nav--categories{

@@ -10,12 +10,12 @@ export const Recommended = ({ title, data }) => {
             </h2>
             <section className='gallery-default'>
                 {data &&
-                    data?.map(title => (
+                    data?.map((title, index) => (
                         <Card
                             key={title.id}
                             data={title}
                         />
-                    ))
+                    )) 
                 }
             </section>
         </section>

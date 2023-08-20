@@ -1,0 +1,9 @@
+.no-results-wrapper{
+    height: 80vh;
+    width: 100vw;
+}
+
+.no-results-text{
+    color: var(--red);
+    font-size: 1.2rem;
+}

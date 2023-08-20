@@ -15,7 +15,7 @@ export const NavBar = () => {
         <nav  ref={navRef} className='navbar' >
             
             <MovieIcon className='navbar--logo' />
-            
+
             <div className="center-content nav--categories">
                 <NavLink
                     className={`center-content nav-button home ${({ isActive }) => (isActive ? 'active' : 'inactive')}`} 

@@ -7,6 +7,7 @@ import { LoadingSpinner } from '../loadingSpinner/LoadingSpinner';
 import { Select } from '../select/Select';
 import { useLocation } from 'react-router-dom';
 import { useSearchContext } from '../../context/SearchProvider';
+import { useGenreContext } from '../../context/GenreProvider';
 
 const LazyHome = React.lazy(() => import('../../pages/Home'));
 const LazyMovies = React.lazy(() => import('../../pages/Movies'));
@@ -17,13 +18,15 @@ export const Main = () => {
     console.log("%cstart main section render", 'color: skyBlue')
 
     const { setSearchTerm } = useSearchContext();
+    const { setGenre } = useGenreContext();
 
     const location = useLocation();
     const locationStr = useLocation().pathname.replace("/", "");
 
     React.useEffect(() => {
         setSearchTerm('');
-    }, [location, setSearchTerm]);
+        setGenre('');
+    }, [location, setSearchTerm, setGenre]);
 
     return(
         <main className='main-display'>
