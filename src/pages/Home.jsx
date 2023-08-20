@@ -12,7 +12,7 @@ const Home = () => {
     console.log('%crendering Home', 'color: brown')
     const { isLoading,
             hasError,
-            data } = useTitles("", 2015, "movie", 50, searchTerm);
+            data } = useTitles("", 2015, "movie", 40, searchTerm);
 
     const { isLoadingRandom,
             hasErrorRandom, 

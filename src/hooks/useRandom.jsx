@@ -1,8 +1,9 @@
 import * as React from 'react';
 
 export const useRandom = () => {
+    console.log("Fetching Random")
     const [isLoadingRandom, setIsLoadingRandom] = React.useState(false);
-    const [hasErrorRandom, setHasError] = React.useState(false);
+    const [hasErrorRandom, setHasErrorRandom] = React.useState(false);
     const [randomData, setRandomData] = React.useState([]);
 
     React.useEffect(() => {
@@ -14,7 +15,7 @@ export const useRandom = () => {
                 headers: {
                     'X-RapidAPI-Key': '584cee3d4cmshbc7ed3c23b24627p11e5c4jsn1dfbb3334930',
                     'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-                }
+                },
             };
 
             try {
@@ -27,7 +28,7 @@ export const useRandom = () => {
                     setRandomData(filteredResults);
                 }
             } catch (error) {
-                setHasError(error)
+                setHasErrorRandom(error)
                 console.error(error);
             }
         };

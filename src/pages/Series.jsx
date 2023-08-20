@@ -13,7 +13,7 @@ const Series = () => {
 
     const {isLoading, 
         hasError, 
-        data} = useTitles(genre, 2000, "tvEpisode", 30, searchTerm);
+        data} = useTitles(genre, 2000, "tvEpisode", 40, searchTerm);
 
     if (isLoading) {
     return (<LoadingSpinner/>)

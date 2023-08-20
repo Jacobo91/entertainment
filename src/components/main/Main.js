@@ -4,10 +4,6 @@ import { SearchBar } from '../searchbar/SearchBar';
 import { Routes, Route } from 'react-router-dom';
 import { LoadingSpinner } from '../loadingSpinner/LoadingSpinner';
 
-// import { Home } from '../../pages/Home';
-// import { Movies } from '../../pages/Movies';
-// import { Series } from '../../pages/Series';
-// import { Bookmarked } from '../../pages/Bookmarked';
 import { Select } from '../select/Select';
 import { useLocation } from 'react-router-dom';
 import { useSearchContext } from '../../context/SearchProvider';

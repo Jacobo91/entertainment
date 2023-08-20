@@ -8,23 +8,14 @@ import { choppedTitle } from "../../utils";
 import { useFavoritesContext } from "../../context/useFavorites";
 import { useLocation } from "react-router-dom";
 import { addToFavorites, removeFromFavorites } from "../../utils";
-import { Blurhash } from 'react-blurhash';
+import LQIP from '../../assets/blurimage.webp';
 
-export const Card = ({ large, titleBar, data }) => {
+
+export const Card = ({ data }) => {
     const { primaryImage, titleText, releaseYear, titleType, originalTitleText } = data;
     const { favorites, setFavorites } = useFavoritesContext();
 
-    const [imageLoaded, setImageLoaded] = React.useState(false);
-
     const location = useLocation().pathname.replace("/", "");
-
-    React.useEffect(() => {
-        const img = new Image()
-        img.onload = () => {
-            setImageLoaded(true)
-        };
-        img.src = primaryImage?.url;
-    }, [primaryImage?.url])
 
     return (
         <>
@@ -41,24 +32,17 @@ export const Card = ({ large, titleBar, data }) => {
                         <BookmarkIconBorder className="bookmarkIcon" />
                     </button>
                 )}
-                <div className={`image-wrapper`} >
-                    {!imageLoaded && (
-                        <Blurhash
-                            className={`card--img`}
-                            hash="LQRysgj[~qt7t7ayj[j[_3t7D%M{"
-                            width="100%" 
-                            height="100%" 
-                            resolutionX={32} 
-                            resolutionY={32} 
-                            punch={1} />
-                    )}
-                    {imageLoaded && 
-                        <LazyLoadImage
-                            id="cover"
-                            className={`card--img`}
-                            src={primaryImage?.url}
-                            alt={titleText.text}
-                    />}
+                <div className='image-wrapper' >
+                    <LazyLoadImage
+                        id="cover"
+                        className='card--img'
+                        src={primaryImage?.url}
+                        alt="Image not available"
+                        effect="blur"
+                        width={'100%'}
+                        height={'100%'}
+                        placeholderSrc={LQIP}
+                    />
                 </div>
                 <div id="info" className={`card--info`}>
                     <div id="description" className="card--description">
