@@ -13,64 +13,49 @@ import LQIP from '../../assets/blurimage.webp';
 
 
 export const Card = ({ data }) => {
-    const { primaryImage, titleText, releaseYear, titleType, originalTitleText } = data;
+    const { primaryImage, titleText, releaseYear, titleType, originalTitleText,  } = data;
     const { favorites, setFavorites } = useFavoritesContext();
     const [isHovered, setIsHovered] = React.useState(false);
 
+
     const location = useLocation().pathname.replace("/", "");
 
-    console.log(`${titleText.text} hovered: ${isHovered}`);
-
+    console.log(`${titleText.text} hovered: ${isHovered}`)    
     return (
-        <div className={`card ${isHovered ? 'hovered' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <div className="card-inner">
-                <div className="card-front">
-                    {!isHovered ? (
-                        <>
-                            {location === "bookmarked" ? (
-                                <button onClick={() => removeFromFavorites(favorites, setFavorites, data)} className="button-bookmark">
-                                    <ClearIcon />
-                                </button>
-                            ) : (
-                                <button onClick={() => addToFavorites(favorites, setFavorites, data)} className="button-bookmark">
-                                    <BookmarkIconBorder className="bookmarkIcon" />
-                                </button>
-                            )}
-                            <div className="image-wrapper">
-                                <LazyLoadImage
-                                    id="cover"
-                                    className="card--img"
-                                    src={primaryImage?.url}
-                                    alt="Image not available"
-                                    effect="blur"
-                                    width={'100%'}
-                                    height={'100%'}
-                                    placeholderSrc={LQIP}
-                                />
-                            </div>
-                        </>
-                    ) : (
-                            <div className="card-back center-content">
-                                <LazyLoadImage
-                                    id="cover"
-                                    className="card--img"
-                                    src={primaryImage?.url}
-                                    alt="Image not available"
-                                    effect="blur"
-                                    width={'100%'}
-                                    height={'100%'}
-                                    placeholderSrc={LQIP}
-                                />
-                                <div className="card-back-text center-content" >
-                                    <p>{choppedTitle(originalTitleText.text)}</p>
-                                    <br />
-                                    <p>{releaseYear.year}</p>
-                                </div>
-                            </div>
-                    )}
+        <>
+            <div id="card" className={`card `} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
+                {!isHovered ? 
+                (<>
+                    {location === "bookmarked" ? (
+                    <button
+                        onClick={() => removeFromFavorites(favorites, setFavorites, data)}
+                        className="button-bookmark"
+                    >
+                        <ClearIcon />
+                    </button>
+                ) : (
+                    <button onClick={() => addToFavorites(favorites, setFavorites, data)} className="button-bookmark">
+                        <BookmarkIconBorder className="bookmarkIcon" />
+                    </button>
+                )}
+                <div className='image-wrapper' >
+                    <LazyLoadImage
+                        id="cover"
+                        className='card--img'
+                        src={primaryImage?.url}
+                        alt="Image not available"
+                        effect="blur"
+                        width={'100%'}
+                        height={'100%'}
+                        placeholderSrc={LQIP}
+                    />
                 </div>
+                </>)
+                :
+                (<div style={{ backgroundColor:"black", width:"100%", height:"100%", borderRadius:"10px" }}></div>)
+            }
             </div>
-        </div>
+        </>
     );
 };
 
