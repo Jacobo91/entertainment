@@ -1,9 +1,23 @@
 import './Trending.css';
 import { Card } from '../card/Card';
 import * as React from 'react';
+import { useRandom } from '../../hooks/useRandom';
+import LoadingSpinner from '../loadingSpinner/LoadingSpinner';
 
 
-export const Trending = ({ data }) => {
+export const Trending = () => {
+
+    const { isLoadingRandom,
+        hasErrorRandom, 
+        randomData } = useRandom();
+
+    if (isLoadingRandom) {
+    return (<LoadingSpinner/>)
+    }
+
+    if (hasErrorRandom) {
+    return (<p>{`Error: ${hasErrorRandom}`}</p>)
+    } 
 
     return (
         <section className="trending-section" >
@@ -13,7 +27,7 @@ export const Trending = ({ data }) => {
 
             <section className='trending-gallery' >
                 {
-                    data && data?.map(title => (
+                    randomData && randomData?.map(title => (
                         <Card
                         key={title.id}
                         data={title}

@@ -1,0 +1,31 @@
+.bookmarks-section{
+    padding: 0 1rem 0 1rem;
+}
+
+.gallery-default{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 368px) {
+    .gallery-default{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bookmarks-section{
+        padding: 0 1.56rem 0 1.56rem;
+    }
+    .gallery-default{
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .bookmarks-section{
+        padding: 0 2.25rem 0 2.25rem;
+    }
+}

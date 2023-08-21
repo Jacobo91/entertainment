@@ -1,11 +1,11 @@
-import { Recommended } from "../components/recommended/Recommended"
+import { Bookmarks } from "../components/bookmarks/Bookmarks";
 import { useFavoritesContext } from "../context/useFavorites"
 
 const Bookmarked = () => {
     const { favorites } = useFavoritesContext();
     return (
         <>
-            <Recommended title="Favorites" bookmarked={favorites}/>
+            <Bookmarks bookmarked={favorites}/>
         </>
     )
 }

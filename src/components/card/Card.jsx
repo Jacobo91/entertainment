@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useFavoritesContext } from "../../context/useFavorites";
 import { useLocation } from "react-router-dom";
 import { addToFavorites, removeFromFavorites } from "../../utils";
-import LQIP from '../../assets/blurimage.webp';
+import LQIP from '../../assets/blurimage.webp'
 
 
 export const Card = ({ data }) => {
