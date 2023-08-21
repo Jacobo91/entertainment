@@ -15,8 +15,6 @@ export const Trending = ({ data }) => {
                 {
                     data && data?.map(title => (
                         <Card
-                        large
-                        titleBar
                         key={title.id}
                         data={title}
                     />

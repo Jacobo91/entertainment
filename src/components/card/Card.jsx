@@ -1,11 +1,9 @@
 import * as React from "react";
 import "./Card.css";
 import BookmarkIconBorder from "@mui/icons-material/BookmarkBorder";
-import BookmarkIcon from '@mui/icons-material/Bookmark';
 import ClearIcon from "@mui/icons-material/Clear";
 import { PropTypes } from "prop-types";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { choppedTitle } from "../../utils";
 import { useFavoritesContext } from "../../context/useFavorites";
 import { useLocation } from "react-router-dom";
 import { addToFavorites, removeFromFavorites } from "../../utils";
@@ -13,19 +11,15 @@ import LQIP from '../../assets/blurimage.webp';
 
 
 export const Card = ({ data }) => {
-    const { primaryImage, titleText, releaseYear, titleType, originalTitleText,  } = data;
+    const { primaryImage } = data;
     const { favorites, setFavorites } = useFavoritesContext();
-    const [isHovered, setIsHovered] = React.useState(false);
-
 
     const location = useLocation().pathname.replace("/", "");
 
-    console.log(`${titleText.text} hovered: ${isHovered}`)    
     return (
         <>
-            <div id="card" className={`card `} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
-                {!isHovered ? 
-                (<>
+            <div id="card" className={`card `} >
+                <>
                     {location === "bookmarked" ? (
                     <button
                         onClick={() => removeFromFavorites(favorites, setFavorites, data)}
@@ -50,17 +44,12 @@ export const Card = ({ data }) => {
                         placeholderSrc={LQIP}
                     />
                 </div>
-                </>)
-                :
-                (<div style={{ backgroundColor:"black", width:"100%", height:"100%", borderRadius:"10px" }}></div>)
-            }
+                </>
             </div>
         </>
     );
 };
 
 Card.propTypes = {
-    large: PropTypes.bool,
-    titleBar: PropTypes.bool,
     data: PropTypes.object.isRequired,
 };
