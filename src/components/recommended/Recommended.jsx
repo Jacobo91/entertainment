@@ -3,6 +3,9 @@ import { Card } from '../card/Card';
 import PropTypes from 'prop-types';
 
 export const Recommended = ({ title, data }) => {
+
+
+    
     return (
         <section className="recommended-section" >
             <h2 className='title' >
@@ -10,7 +13,7 @@ export const Recommended = ({ title, data }) => {
             </h2>
             <section className='gallery-default'>
                 {data &&
-                    data?.map((title, index) => (
+                    data?.map((title) => (
                         <Card
                             key={title.id}
                             data={title}

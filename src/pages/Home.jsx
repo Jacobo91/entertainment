@@ -4,15 +4,17 @@ import { useTitles } from "../hooks/useTitles";
 import LoadingSpinner from "../components/loadingSpinner/LoadingSpinner";
 import { useRandom } from "../hooks/useRandom";
 import { useSearchContext } from "../context/SearchProvider";
+import NoResults from '../components/noResults/NoResults';
+
 
 const Home = () => { 
 
     const { searchTerm } = useSearchContext();
 
-    console.log('%crendering Home', 'color: brown')
     const { isLoading,
             hasError,
-            data } = useTitles("", 2015, "movie", 40, searchTerm);
+            data,
+            entries } = useTitles("", 2015, "movie", 20, searchTerm);
 
     const { isLoadingRandom,
             hasErrorRandom, 
@@ -22,12 +24,16 @@ const Home = () => {
     return (<LoadingSpinner/>)
     }
 
+    if (entries === 0) {
+        return <NoResults/>
+    }
+
     if (hasError || hasErrorRandom) {
     return (<p>{`Error: ${hasError}`}</p>)
     }   
     return (
         <>
-            <Trending data={randomData} />
+            {!searchTerm && <Trending data={randomData} />}
             <Recommended title="Recommended for you" data={data}/>
         </>
     )

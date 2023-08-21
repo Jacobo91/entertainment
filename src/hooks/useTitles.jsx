@@ -12,6 +12,7 @@ export const useTitles = (
     const [isLoading, setIsLoading] = React.useState(false);
     const [hasError, setHasError] = React.useState(false);
     const [data, setData] = React.useState([]);
+    const [entries, setEntires] = React.useState(null);
 
     React.useEffect(() => {
 
@@ -33,9 +34,10 @@ export const useTitles = (
                 const response = await fetch(url, options);
                 if (response.ok) {
                     const result = await response.json();
-                    const filteredResults = result.results?.filter(title => title.primaryImage && title.primaryImage !== null);
+                    // const filteredResults = result.results?.filter(title => title.primaryImage && title.primaryImage !== null);
                     setIsLoading(false);
-                    setData(filteredResults)
+                    setData(result.results);
+                    setEntires(result.entries);
                 }
 
             } catch (error) {
@@ -54,7 +56,8 @@ export const useTitles = (
     return {
         isLoading,
         hasError,
-        data
+        data,
+        entries
     }
 };
 
