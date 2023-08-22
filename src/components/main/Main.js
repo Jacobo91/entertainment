@@ -15,7 +15,6 @@ const LazySeries = React.lazy(() => import('../../pages/Series'));
 const LazyBookmarked = React.lazy(() => import('../../pages/Bookmarked'));
 
 export const Main = () => {
-    console.log("%cstart main section render", 'color: skyBlue')
 
     const { setSearchTerm } = useSearchContext();
     const { setGenre } = useGenreContext();

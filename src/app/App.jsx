@@ -6,8 +6,6 @@ import { Main } from '../components/main/Main';
 
 
 function App() {
-  console.log("starting app render")
-  console.log("end app render")
   return (
     
       <Router>

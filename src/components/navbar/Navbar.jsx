@@ -9,7 +9,6 @@ import TvIcon from '@mui/icons-material/Tv';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 export const NavBar = () => {
-    console.log("%cstarting navbar render", 'color: yellow')
     const navRef = React.useRef()
     return(
         <nav  ref={navRef} className='navbar' >

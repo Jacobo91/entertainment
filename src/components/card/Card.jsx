@@ -15,7 +15,6 @@ export const Card = ({ data }) => {
     const { favorites, setFavorites } = useFavoritesContext();
 
     const location = useLocation().pathname.replace("/", "");
-
     return (
         <>
             <div id="card" className={`card `} >
