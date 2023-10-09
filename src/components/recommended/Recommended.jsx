@@ -17,7 +17,7 @@ export const Recommended = ({ title, bookmarked }) => {
     const { isLoading,
             hasError,
             data,
-            entries } = useTitles(genre , 2015, type, 20, searchTerm);
+            entries } = useTitles(genre , 2015, type, 50, searchTerm);
     
     const myData = !bookmarked ? data : bookmarked;
     
