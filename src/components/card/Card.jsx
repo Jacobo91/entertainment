@@ -31,18 +31,18 @@ export const Card = ({ data }) => {
                         <BookmarkIconBorder className="bookmarkIcon" />
                     </button>
                 )}
-                <div className='image-wrapper' >
+                {/* <div className='image-wrapper' > */}
                     <LazyLoadImage
                         id="cover"
                         className='card--img'
                         src={primaryImage?.url}
                         alt="Image not available"
                         effect="blur"
-                        width={'100%'}
-                        height={'100%'}
+                        // width={'100%'}
+                        // height={'100%'}
                         placeholderSrc={LQIP}
                     />
-                </div>
+                {/* </div> */}
                 </>
             </div>
         </>
