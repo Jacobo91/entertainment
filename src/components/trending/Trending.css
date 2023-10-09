@@ -12,6 +12,9 @@
     scrollbar-width: thin;
     scrollbar-color: #aaa #f1f1f1;
     border-radius: 10px;
+    margin-right: 4rem;
+    scroll-behavior: smooth;
+    padding: 0 1.5rem 0 0;
 }
 
 .trending-gallery::-webkit-scrollbar {

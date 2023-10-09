@@ -9,7 +9,7 @@ export const useRandom = () => {
     React.useEffect(() => {
 
         const getRandom = async () => {
-            const url = 'https://moviesdatabase.p.rapidapi.com/titles/random?list=most_pop_movies';
+            const url = 'https://moviesdatabase.p.rapidapi.com/titles/random?list=most_pop_movies&limit=30';
             const options = {
                 method: 'GET',
                 headers: {
